@@ -43,14 +43,14 @@ switch ($action) {
     }
     case 'display_questions': {
         $userId = filter_input(INPUT_GET, 'userId');
+        $listType = filter_input(INPUT_GET, 'listType');
         if ($userId == NULL || $userId < 0) {
             header('Location: .?action=display_login');
         } 
         else 
         {
             $questions = get_users_questions($userId);
-            //$questions = ($listType === 'all') ;
-            //get_all_questions() : get_users_questions($userId);
+            $questions = ($listType === 'all') ? get_all_questions() : get_users_questions($userId);
             include('display_questions.php');
         }
         break;
