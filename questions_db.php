@@ -35,7 +35,7 @@ function create_question($title, $body, $skills, $userId) {
 	$statement->bindValue(':title', $title);
 	$statement->bindValue(':body', $body);
 	$statement->bindValue(':skills', $skills);
-	$statement->bindValue(':ownerid', $ownerid);
+	$statement->bindValue(':ownerid', $userId);
 	$statement->execute();
 	$statement->closeCursor();
 
