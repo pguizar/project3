@@ -42,4 +42,26 @@ function create_question($title, $body, $skills, $userId) {
 
 }
 
+function delete_question ($questionId) {
+	global $db;
+
+	$query = 'DELETE FROM questions WHERE id = :questionId';
+	$statement = $db->prepare($query);
+	$statement->bindValue(':questionId', $questionId);
+	$statement->execute();
+	$statement->closeCursor();
+
+}
+
+/*function edit_question ($questionId) {
+	global $db;
+
+	$query = '';
+	$statement = $db->prepare($query);
+	$statement->bindValue(':questionId', $questionId);
+	$statement->execute();
+	$statement->closeCursor();
+
+} */
+
 ?>
