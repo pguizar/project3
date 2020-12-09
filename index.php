@@ -86,6 +86,28 @@ switch ($action) {
         break;
 
     }
-   
+    case 'delete_question': {
+        $questionId = filter_input(INPUT_POST, 'questionId');
+        $userId = filter_input(INPUT_POST, 'userId');
+        if($questionId == NULL || $userId == NULL) {
+            echo 'All Fields are required';
+        }
+        else {
+            delete_question($questionId);
+            header("Location: .?action=display_questions&userId=$userId");
+        }
+        break;
+    }
+    /*case 'edit_question':{
+        $questionId = filter_input(INPUT_POST, 'questionId');
+        $userId = filter_input(INPUT_POST, 'userId');
+                if($questionId == NULL || $userId == NULL) {
+            echo 'All Fields are required';
+        }
+        else {
+            edit_question($questionId);
+            header("Location: .?action=display_questions&userId=$userId");
 
+    }   
+    break; */
     }
