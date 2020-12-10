@@ -99,7 +99,10 @@ switch ($action) {
         break;
     }
     /*case 'edit_question':{
-        $questionId = filter_input(INPUT_GET, 'questionId');
+        $edit = filter_input(INPUT_GET, 'edit');
+        $body = filter_input(INPUT_GET, 'body');
+        $title = filter_input(INPUT_GET, 'title');
+        $skills = filter_input(INPUT_GET, 'skills');
         $userId = filter_input(INPUT_GET, 'userId');
                 if($questionId == NULL || $userId == NULL) {
             echo 'All Fields are required';
