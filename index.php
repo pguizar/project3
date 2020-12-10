@@ -99,14 +99,14 @@ switch ($action) {
         break;
     }
     /*case 'edit_question':{
-        $questionId = filter_input(INPUT_POST, 'questionId');
-        $userId = filter_input(INPUT_POST, 'userId');
+        $questionId = filter_input(INPUT_GET, 'questionId');
+        $userId = filter_input(INPUT_GET, 'userId');
                 if($questionId == NULL || $userId == NULL) {
             echo 'All Fields are required';
         }
         else {
             edit_question($questionId);
-            header("Location: .?action=display_questions&userId=$userId");
+            header("Location: .?action=display_question_form&userId=$userId");
 
     }   
     break; */
