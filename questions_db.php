@@ -56,7 +56,7 @@ function delete_question ($questionId) {
 /*function edit_question ($questionId) {
 	global $db;
 
-	$query = '';
+	$query = 'SELECT * FROM questions WHERE id = :questionId';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':questionId', $questionId);
 	$statement->execute();
