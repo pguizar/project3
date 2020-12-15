@@ -39,6 +39,7 @@ function create_question($title, $body, $skills, $userId) {
 	$statement->execute();
 	$statement->closeCursor();
 
+
 }
 
 function delete_question ($questionId) {
@@ -51,5 +52,6 @@ function delete_question ($questionId) {
 	$statement->closeCursor();
 
 }
+
 
 ?>
