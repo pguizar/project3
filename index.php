@@ -1,7 +1,7 @@
 <?php
-require('model/pdo.php');
-require('model/accounts_db.php');
-require('model/questions_db.php');
+require('pdo.php');
+require('accounts_db.php');
+require('questions_db.php');
 
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
@@ -63,7 +63,7 @@ switch ($action) {
         }
         else
         {
-            include('views/newQuestionForm.php');
+            include('newQuestionForm.php');
         }
         break;
     }
@@ -99,3 +99,4 @@ switch ($action) {
         break;
     }
     } 
+?>
