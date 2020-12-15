@@ -1,7 +1,7 @@
 <?php
-require('pdo.php');
-require('accounts_db.php');
-require('questions_db.php');
+require('model/pdo.php');
+require('model/accounts_db.php');
+require('model/questions_db.php');
 
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
@@ -63,7 +63,7 @@ switch ($action) {
         }
         else
         {
-            include('newQuestionForm.php');
+            include('views/newQuestionForm.php');
         }
         break;
     }
@@ -98,19 +98,4 @@ switch ($action) {
         }
         break;
     }
-    /*case 'edit_question':{
-        $edit = filter_input(INPUT_GET, 'edit');
-        $body = filter_input(INPUT_GET, 'body');
-        $title = filter_input(INPUT_GET, 'title');
-        $skills = filter_input(INPUT_GET, 'skills');
-        $userId = filter_input(INPUT_GET, 'userId');
-                if($questionId == NULL || $userId == NULL) {
-            echo 'All Fields are required';
-        }
-        else {
-            edit_question($questionId);
-            header("Location: .?action=display_question_form&userId=$userId");
-
-    }   
-    break; */
-    }
+    } 
