@@ -9,7 +9,7 @@
     <nav> 
       <ul>
         <li> <a href = "login.php" > Login </a> </li>
-        <li> <a href = "newQuestionForm.php" > New Question Form </a> </li>
+        
       </ul>
   </nav>
 <?php
